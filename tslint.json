@@ -1,0 +1,194 @@
+{
+  "extends": [
+    "tslint:latest",
+    "tslint-react",
+    "tslint-immutable",
+    "tslint-consistent-codestyle",
+    "tslint-clean-code",
+    "tslint-eslint-rules",
+    "tslint-sonarts"
+  ],
+  "rulesDirectory": [
+    "node_modules/vrsource-tslint-rules/rules",
+    "node_modules/tslint-microsoft-contrib",
+    "node_modules/tslint-misc-rules/rules",
+    "node_modules/custom-tslint-rules/dist"
+  ],
+  "rules": {
+    "arrow-parens": [true, "ban-single-arg-parens"],
+    "space-before-function-paren": [true, {
+        "anonymous": "always",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ],
+    "max-line-length": [true, 140],
+    "interface-over-type-literal": true,
+    "newline-before-return": true,
+    "no-console": [true, "log"],
+    "no-namespace": [true, "allow-declarations"],
+    "object-literal-sort-keys": true,
+    "import-spacing": true,
+    "ordered-imports": [
+      true,
+      {
+        "import-sources-order": "lowercase-last",
+        "named-imports-order": "lowercase-last",
+        "grouped-imports": true,
+        "module-source-path": "full"
+      }
+    ],
+    "quotemark": [true, "single", "jsx-double", "avoid-template"],
+    "jsx-no-multiline-js": false,
+    "literal-spacing": [
+      true,
+      {
+          "array": ["never"],
+          "object": ["always"],
+          "import": ["always"]
+      }
+    ],
+    "no-shadowed-variable": true,
+    "typedef": [true, "call-signature"],
+    "readonly-keyword": false,
+    "readonly-array": false,
+    "prefer-object-spread": [false],
+    "no-submodule-imports": [false],
+    "jsx-no-lambda": true,
+    "jsx-boolean-value": false,
+    "prefer-const": true,
+    "array-type": [true, "array"],
+    "member-access": [true, "no-public"],
+    "interface-name": [true, "never-prefix"],
+    "class-name": true,
+    "no-empty-interface": false,
+    "triple-equals": [true, "allow-null-check"],
+    "variable-name": [
+      true,
+      "check-format",
+      "ban-keywords",
+      "allow-pascal-case",
+      "allow-leading-underscore",
+      "allow-trailing-underscore"
+    ],
+    "no-implicit-dependencies": false,
+    "ban-comma-operator": false,
+    "typedef-whitespace": [true,
+      {
+      "call-signature": "nospace",
+      "index-signature": "nospace",
+      "parameter": "nospace",
+      "property-declaration": "nospace",
+      "variable-declaration": "nospace"
+      },
+      {
+      "call-signature": "onespace",
+      "index-signature": "onespace",
+      "parameter": "onespace",
+      "property-declaration": "onespace",
+      "variable-declaration": "onespace"
+      }
+    ],
+    "type-literal-delimiter": true,
+    "no-unnecessary-qualifier": true,
+    "restrict-plus-operands": true,
+    "number-literal-format": true,
+    "promise-function-async": true,
+    "no-dynamic-delete": true,
+    "no-delete": true,
+    "no-parameter-reassignment": true,
+    "whitespace": [true,
+      "check-branch",
+      "check-decl",
+      "check-operator",
+      "check-module",
+      "check-separator",
+      "check-rest-spread",
+      "check-type",
+      "check-typecast",
+      "check-type-operator",
+      "check-preblock"
+    ],
+    "no-unused-vars": ["error", { "argsIgnorePattern": "^_+$" }],
+    "max-classes-per-file": [true, 1, "exclude-class-expressions"],
+    "no-irregular-whitespace": true,
+    "max-params": [
+      true, 2
+    ],
+    "no-redundant-jsdoc": true,
+    "no-unnecessary-type-assertion": true,
+    "strict-type-predicates": true,
+    "no-object-mutation": [true, { "ignore-prefix": "this.[^(state)]" }],
+    "comment-format": [true, "check-space"],
+    "no-this-assignment": [true, { "allow-destructuring": true }],
+    "object-literal-shorthand": true,
+    "naming-convention": [
+      true,
+      {"type": "variable", "regex": ".+"},
+      {"type": "enum", "format": "PascalCase"},
+      {"type": "enumMember", "format": ["PascalCase", "UPPER_CASE"]}
+    ],
+    "no-accessor-recursion": true,
+    "no-collapsible-if": true,
+    "no-else-after-return": true,
+    "prefer-const-enum": true,
+    "no-commented-out-code": true,
+    "no-map-without-usage": true,
+    "newspaper-order": true,
+    "no-complex-conditionals": true,
+    "no-for-each-push": true,
+    "use-default-type-parameter": true,
+    "prefer-switch": true,
+    "no-small-switch": false,
+    "prefer-dry-conditionals": true,
+    "no-magic-numbers": true,
+    "no-multi-spaces": true,
+    "no-delete-expression": true,
+    "no-empty-line-after-opening-brace": true,
+    "no-for-in": true,
+    "no-function-expression": true,
+    "no-suspicious-comment": true,
+    "no-typeof-undefined": true,
+    "no-unnecessary-bind": true,
+    "no-unnecessary-local-variable": true,
+    "no-useless-files": true,
+    "promise-must-complete": true,
+    "react-a11y-event-has-role": true,
+    "react-a11y-aria-unsupported-elements": true,
+    "react-a11y-anchors": true,
+    "react-a11y-image-button-has-alt": true,
+    "react-a11y-img-has-alt": true,
+    "react-anchor-blank-noopener": true,
+    "react-iframe-missing-sandbox": true,
+    "class-method-newlines": true,
+    "prefer-or-operator-over-ternary": true,
+    "prefer-readonly": true,
+    "prefer-literal": [
+        true,
+        "object",
+        "function",
+        "array"
+    ],
+    "id-length": [true, { "exceptions": ["_", "K", "P", "T", "U", "V"] }],
+    "no-null-keyword": true,
+    "no-unnecessary-class": true,
+    "early-exit": true,
+    "jsdoc-format": true,
+    "prefer-function-over-method": true,
+    "possible-timing-attack": true,
+    "no-non-null-assertion": true,
+    "deprecation": { "severity": "warning" },
+    "import-barrels": [
+      true,
+      {"noExplicitBarrels": true, "fileExtensions": ["ts", "tsx"]}
+    ],
+    "object-curly-spacing": true,
+    "block-spacing": [true, "always"],
+    "ter-computed-property-spacing": [true, "never"],
+    "ter-func-call-spacing": [true, "never"],
+    "ter-prefer-arrow-callback": [true, {
+      "allowNamedFunctions": true
+    }],
+    "no-duplicate-string": [true, 5]
+  }
+}

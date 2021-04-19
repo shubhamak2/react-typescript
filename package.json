@@ -1,0 +1,59 @@
+{
+  "name": "centra-recruitment-task",
+  "version": "0.2.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development parcel --port 3000 index.html",
+    "build": "cross-env NODE_ENV=production parcel build index.html",
+    "lint": "npm run lint:scripts && npm run lint:declarations",
+    "lint:scripts": "tslint './src/**/*.{ts,tsx}' --project tsconfig.json --fix --format stylish",
+    "lint:declarations": "tslint --project tsconfig.json --format stylish --fix './typings/**/*'",
+    "prepush": "npm run lint && tsc --noEmit",
+    "dependencies:update": "npx npm-check --update --save-exact",
+    "tsc": "tsc"
+  },
+  "engines": {
+    "node": ">=10",
+    "npm": ">=6"
+  },
+  "dependencies": {
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-redux": "7.2.0",
+    "redux": "4.0.5",
+    "typescript": "3.8.3"
+  },
+  "postcss": {
+    "modules": true,
+    "plugins": {
+      "autoprefixer": {
+        "browsers": [
+          ">5%"
+        ],
+        "flexbox": "no-2009"
+      }
+    }
+  },
+  "devDependencies": {
+    "@types/react": "16.9.34",
+    "@types/react-dom": "16.9.6",
+    "@types/react-redux": "7.1.7",
+    "@types/webpack-env": "1.15.1",
+    "autoprefixer": "9.3.1",
+    "cross-env": "5.2.0",
+    "custom-tslint-rules": "3.0.0",
+    "husky": "1.2.0",
+    "parcel-bundler": "1.12.4",
+    "postcss-modules": "2.0.0",
+    "tslint": "5.11.0",
+    "tslint-clean-code": "0.2.9",
+    "tslint-consistent-codestyle": "1.14.1",
+    "tslint-eslint-rules": "5.4.0",
+    "tslint-immutable": "5.0.0",
+    "tslint-microsoft-contrib": "5.2.1",
+    "tslint-misc-rules": "3.5.1",
+    "tslint-react": "3.6.0",
+    "tslint-sonarts": "1.8.0",
+    "vrsource-tslint-rules": "5.8.2"
+  }
+}
