@@ -1,6 +1,8 @@
 import React from 'react';
 import Loader from 'react-loader-spinner';
 
+import { StyleConstants } from '../styleConstants';
+
 interface LoaderProps {
   type ?: 'Puff';
   color ?: string;
@@ -12,7 +14,7 @@ export const CustomLoader = ({ type, color, width, height }: LoaderProps) => {
   return (
     <Loader
       type={type || 'Puff'}
-      color={color || '#00BFFF'}
+      color={color || StyleConstants.colors.loaderColor}
       height={height || 100}
       width={width || 100}
     />

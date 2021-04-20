@@ -1,6 +1,6 @@
 import { combineReducers } from '@reduxjs/toolkit';
 
-import CustomerListReducer from './gitUsersList';
+import CustomerListReducer from '../gitUsersList';
 
 const rootReducer = combineReducers({
   customerList: CustomerListReducer,

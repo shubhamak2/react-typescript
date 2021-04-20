@@ -2,8 +2,11 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { addgitUsers } from '../../redux/actions/users';
-import { fetchgitUsersListStart } from '../../redux/reducers';
+import { fetchgitUsersListStart } from '../../redux/gitUsersList';
+// @ts-ignore
+import * as styles from '../../styles';
 import Loader from '../Wrapper/loader';
+import { StyleConstants } from '../styleConstants';
 
 import User from './user';
 
@@ -33,9 +36,9 @@ export const GitUsersList = () => {
       ) : (
         <div
           onScroll={handleScroll}
-          style={{ overflow: 'auto', height: 'calc(90vh - 116px)' }}
+          style={{ overflow: 'auto', height: 'calc(90vh - 116px)', padding: '30px', backgroundColor: StyleConstants.colors.background }}
         >
-          <div className={'wrapper'}>
+          <div className={styles.wrapper}>
             {customerList.map((item: any) => {
               return (
                 <User

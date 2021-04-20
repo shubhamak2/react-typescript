@@ -7,7 +7,7 @@ import {
   fetchPaginatedUsersList,
   fetchgitUsersListStart,
   fetchgitUsersListSuccess,
-} from '../reducers';
+} from '../gitUsersList';
 import { fetchData, fetchPaginatedData } from '../services/userListApi';
 
 function* gitUsersListWatcher() {

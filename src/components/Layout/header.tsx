@@ -1,9 +1,17 @@
 import React from 'react';
 
+// @ts-ignore
+// @ts-ignore
+import logo from '../../assets/github_logo.png';
+import * as styles from '../../styles';
+
 const Header = () => {
   return (
-    <div className={'header'}>
-      <h1>Github Users</h1>
+    <div className={styles.header}>
+      <div className={styles.headerLogoContainer}>
+        <img className={styles.headerLogoImage} alt={'githuv logo'} src={logo}/>
+        <span className={styles.headerLogoText}>Github Users</span>
+      </div>
     </div>
   );
 };
