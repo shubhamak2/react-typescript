@@ -11,7 +11,7 @@
     "baseUrl": ".",
     "moduleResolution": "node",
     "pretty": true,
-    "allowSyntheticDefaultImports": false,
+    "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "strict": true,
     "noImplicitReturns": true,

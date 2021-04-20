@@ -1,19 +1,21 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import { Provider } from 'react-redux';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 
-import logo from './assets/logo.svg';
-import { Image, Title } from './components';
-import store from './store/store';
-
-import * as styles from './styles';
+import { GitUsersList } from './components/Home/gitUsersList';
+import Header from './components/Layout/header';
+import store from './redux/store';
 
 const App = () => (
   <Provider store={store}>
-    <div className={styles.App}>
-      <Image src={logo} alt="React logo"/>
-      <Title>Hello Parcel x React</Title>
-    </div>
+    <Header />
+    <Router>
+      <Switch>
+        <Route exact={true} path="/" render={() => <GitUsersList />}/>
+      </Switch>
+    </Router>
   </Provider>
 );
 
