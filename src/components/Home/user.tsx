@@ -1,7 +1,5 @@
 import React from 'react';
 
-import * as styles from '../../styles';
-
 interface UserProps {
   login: string;
   id: string;
@@ -10,7 +8,7 @@ interface UserProps {
 
 export const User = ({ login, id, url }: UserProps) => {
   return (
-    <div className={styles.gridItem}>
+    <div className={'gridItem'}>
       <img src={url} style={{ float: 'left' }} alt="no image"/>
       <span>{login}</span>
       <br />

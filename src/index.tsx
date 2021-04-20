@@ -7,6 +7,7 @@ import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import { GitUsersList } from './components/Home/gitUsersList';
 import Header from './components/Layout/header';
 import store from './redux/store';
+import './styles';
 
 const App = () => (
   <Provider store={store}>
