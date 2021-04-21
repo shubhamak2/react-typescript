@@ -1,1 +1,2 @@
 export const ADD_GITUSERS = 'ADD_GITUSERS';
+export const USER_DETAILS = 'USER_DETAILS';

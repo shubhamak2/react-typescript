@@ -5,7 +5,7 @@ const initialState = {
   isLoading: true,
   error: false,
   customerList: [],
-  pageNumber: 1,
+  isLoadingMore: true
 };
 
 const {
