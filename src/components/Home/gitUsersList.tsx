@@ -32,7 +32,7 @@ export const GitUsersList = () => {
   return (
     <>
       {isLoading ? (
-        <Loader />
+        <Loader className={styles.alignCenter}/>
       ) : (
         <div
           onScroll={handleScroll}

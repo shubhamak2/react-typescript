@@ -8,17 +8,23 @@ interface LoaderProps {
   color ?: string;
   width ?: string | number;
   height ?: string | number;
+  className ?: any;
 }
 
-export const CustomLoader = ({ type, color, width, height }: LoaderProps) => {
+export const CustomLoader = ({ type, color, width, height, className }: LoaderProps) => {
   return (
-    <Loader
-      type={type || 'Puff'}
-      color={color || StyleConstants.colors.loaderColor}
-      height={height || 100}
-      width={width || 100}
-    />
+    <div className={className || ''}>
+      <Loader
+        type={type || 'Puff'}
+        color={color || StyleConstants.colors.loaderColor}
+        height={height || 100}
+        width={width || 100}
+      />
+    </div>
   );
 };
 
 export default CustomLoader;
+
+// justify-content: center;
+//         margin-top: 15px;}}

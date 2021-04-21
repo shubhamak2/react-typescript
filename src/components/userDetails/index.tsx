@@ -25,7 +25,7 @@ export const UserDetails = () => {
   return (
     <>
       {isLoading ? (
-        <Loader />
+        <Loader className={styles.alignCenter}/>
       ) : (
         <div
           style={{

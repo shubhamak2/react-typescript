@@ -126,14 +126,11 @@ body {
   margin-top: 16px;
 }
 
-/* .gridItem {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 20px;
-  text-align: center;
-  float: left;
-  margin-left: 20px;
-  margin-bottom: 20px;
-} */
+.alignCenter {
+  justify-content: center;
+  display: flex;
+  margin-top: 15px;
+}
 
 @media screen and (max-width: 1130px) {
   .gridItem {
