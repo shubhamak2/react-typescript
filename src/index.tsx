@@ -11,8 +11,8 @@ import store from './redux/store';
 
 const App = () => (
   <Provider store={store}>
-    <Header />
     <Router>
+      <Header />
       <Switch>
         <Route exact={true} path="/" render={() => <GitUsersList />}/>
         <Route exact={true} path="/user-details/:username" render={() => <UserDetails />}/>
