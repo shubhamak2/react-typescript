@@ -28,7 +28,7 @@ const Header = () => {
         }
       </div>
       <div className={styles.headerLogoContainer}>
-        <img className={styles.headerLogoImage} alt={'githuv logo'} src={logo}/>
+        <img className={styles.headerLogoImage} alt={'github logo'} src={logo}/>
         <span className={styles.headerLogoText}>Github Users</span>
       </div>
     </div>

@@ -49,13 +49,14 @@ body {
 }
 
 .wrapper {
-  display: block;
+  display: inline-block;
   width: 100%;
 }
 
 .headerLogoContainer {
   text-align: center;
   position: relative;
+  width: 100%;
 }
 
 .headerLogoImage {
@@ -106,9 +107,9 @@ body {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 20px;
   text-align: center;
-  width: 27%;
+  width: calc(100% / 3 - 60px);
   float: left;
-  margin-left: 20px;
+  margin: 0 10px;
   margin-bottom: 20px;
   border-radius: 4px;
 }
@@ -134,15 +135,44 @@ body {
 
 @media screen and (max-width: 1130px) {
   .gridItem {
-    width: 27%;
+    width: calc(100% / 3 - 60px);
   }
 }
 
-/* @media screen and (min-width: 1131px) {
+@media screen and (max-width: 800px) {
   .gridItem {
-    width: 40%;
+    width: calc(100% / 2 - 60px);
   }
-} */
+}
+
+.errorContainer {
+  background-color: #F5F5F5;
+  width: 100%;
+  height: calc(100% - 90px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.errorMessage {
+  width: 350px;
+  height: 150px;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.returnHome {
+  background-color: white;
+  padding: 20px;
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid rgb(245 245 245);
+}
 
 @media screen and (max-width: 800px) {
   .gridItem {
@@ -152,4 +182,6 @@ body {
 
 .header {
   padding: 20px;
+  display: flex;
+  align-items: center;
 }
