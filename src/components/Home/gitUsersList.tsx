@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { addgitUsers } from '../../redux/actions/users';
-import { fetchgitUsersListStart } from '../../redux/gitUsersList';
+import { addMoreUsers } from '../../redux/actions/users';
+import { fetchGitUsersListStart } from '../../redux/gitUsersList';
 // @ts-ignore
 import * as styles from '../../styles';
 import Loader from '../Wrapper/loader';
@@ -16,17 +16,17 @@ export const GitUsersList = () => {
       event.target.scrollHeight - event.target.scrollTop ===
       event.target.clientHeight;
     if (bottom) {
-      dispatch(addgitUsers());
+      dispatch(addMoreUsers());
     }
   };
 
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchgitUsersListStart());
+    dispatch(fetchGitUsersListStart());
   }, []);
 
-  const { customerList, isLoading } = useSelector(
-    (state: any) => state.customerList,
+  const { userList, isLoading } = useSelector(
+    (state: any) => state.userList,
   );
 
   return (
@@ -39,7 +39,7 @@ export const GitUsersList = () => {
           style={{ overflow: 'auto', height: 'calc(90vh - 116px)', padding: '30px', backgroundColor: StyleConstants.colors.background }}
         >
           <div className={styles.wrapper}>
-            {customerList.map((item: any) => {
+            {userList.map((item: any) => {
               return (
                 <User
                   key={item.id}

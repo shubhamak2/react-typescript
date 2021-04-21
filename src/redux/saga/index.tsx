@@ -1,9 +1,9 @@
 import { all } from 'redux-saga/effects';
 
-import usersList from './gitUsersList';
+import gitUsers from './gitUsers';
 
 export default function* rootSaga() {
   yield all([
-    usersList(),
+    gitUsers(),
   ]);
 }

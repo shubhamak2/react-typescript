@@ -1,11 +1,11 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 // @ts-ignore
-import * as styles from "../../styles";
-import GithubLogoText from "../Wrapper/githubLogoText";
-import Team from "../Wrapper/team";
-import { StyleConstants } from "../styleConstants";
+import * as styles from '../../styles';
+import GithubLogoText from '../Wrapper/githubLogoText';
+import Team from '../Wrapper/team';
+import { StyleConstants } from '../styleConstants';
 
 interface UserProps {
   login: string;
@@ -20,7 +20,7 @@ export const User = ({ login, id, url }: UserProps) => {
         <img
           className={styles.imgUserList}
           src={url}
-          style={{ float: "left" }}
+          style={{ float: 'left' }}
           alt="no image"
         />
         <div className={styles.userCardList}>
@@ -33,11 +33,11 @@ export const User = ({ login, id, url }: UserProps) => {
         </div>
       </div>
       <div className={styles.userListFooterContainer}>
-        <div style={{ marginTop: "12px" }}>
+        <div style={{ marginTop: '12px' }}>
           <Link
             to={`/user-details/${login}`}
             style={{
-              textDecoration: "none",
+              textDecoration: 'none',
               color: StyleConstants.colors.linkButton,
             }}
           >

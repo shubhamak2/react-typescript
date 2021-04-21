@@ -1,12 +1,11 @@
 import { combineReducers } from '@reduxjs/toolkit';
 
-import CustomerListReducer from '../gitUsersList';
 import UserDetailsReducer from '../gitUserDetails';
+import UserListReducer from '../gitUsersList';
 
 const rootReducer = combineReducers({
-  customerList: CustomerListReducer,
-  userDetails: UserDetailsReducer
-
+  userList: UserListReducer,
+  userDetails: UserDetailsReducer,
 });
 
 export default rootReducer;

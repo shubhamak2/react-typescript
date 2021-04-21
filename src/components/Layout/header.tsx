@@ -1,8 +1,8 @@
 import React from 'react';
 
 // @ts-ignore
-// @ts-ignore
 import logo from '../../assets/github_logo.png';
+// @ts-ignore
 import * as styles from '../../styles';
 
 const Header = () => {

@@ -11,14 +11,13 @@ const initialState = {
 const {
   actions: {
     fetchingUserDetails,
-    fetchingUserDetailsFailure
+    fetchingUserDetailsFailure,
   },
   reducer,
 } = createSlice({
   name: 'userDetails',
   initialState,
   reducers: {
-
     fetchingUserDetails: (state, action) => ({
       ...initialState,
       userDetails: action && action.payload && action.payload.userData,

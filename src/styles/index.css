@@ -113,14 +113,22 @@ body {
   border-radius: 4px;
 }
 
-.gridItem {
+.profileGrid {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  text-align: center;
+  width: 44%;
+  float: left;
+}
+
+/* .gridItem {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 20px;
   text-align: center;
   float: left;
   margin-left: 20px;
   margin-bottom: 20px;
-}
+} */
 
 @media screen and (max-width: 1130px) {
   .gridItem {
@@ -128,11 +136,11 @@ body {
   }
 }
 
-@media screen and (min-width: 1131px) {
+/* @media screen and (min-width: 1131px) {
   .gridItem {
     width: 40%;
   }
-}
+} */
 
 @media screen and (max-width: 800px) {
   .gridItem {

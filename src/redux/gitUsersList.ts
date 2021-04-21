@@ -1,35 +1,44 @@
 import { createSlice } from '@reduxjs/toolkit';
 // page number and limit
 
+interface State {
+  isLoading: boolean;
+  error: boolean;
+  userList: any;
+  pageNumber: number;
+  isLoadingMore: boolean;
+}
+
 const initialState = {
   isLoading: true,
   error: false,
-  customerList: [],
-  isLoadingMore: true
+  userList: [],
+  pageNumber: 1,
+  isLoadingMore: true,
 };
 
 const {
   actions: {
-    fetchgitUsersListStart,
-    fetchgitUsersListSuccess,
-    fetchgitUsersListFailure,
+    fetchGitUsersListStart,
+    fetchGitUsersListSuccess,
+    fetchGitUsersListFailure,
     fetchPaginatedUsersList,
   },
   reducer,
 } = createSlice({
-  name: 'customerList',
+  name: 'userList',
   initialState,
   reducers: {
-    fetchgitUsersListStart: () => ({
+    fetchGitUsersListStart: () => ({
       ...initialState,
       isLoading: true,
     }),
-    fetchgitUsersListSuccess: (state, action) => ({
+    fetchGitUsersListSuccess: (state: State, action) => ({
       ...initialState,
-      customerList: action && action.payload && action.payload.customerData,
+      userList: action && action.payload && action.payload.userData,
       isLoading: false,
     }),
-    fetchgitUsersListFailure: () => ({
+    fetchGitUsersListFailure: () => ({
       ...initialState,
       error: true,
       isLoading: false,
@@ -37,15 +46,15 @@ const {
     fetchPaginatedUsersList: (state, action) => ({
       ...initialState,
       isLoading: false,
-      customerList: action.payload.customerData,
+      userList: action.payload.userData,
       pageNumber: state.pageNumber + 1,
     }),
   },
 });
 export default reducer;
 export {
-  fetchgitUsersListStart,
-  fetchgitUsersListSuccess,
-  fetchgitUsersListFailure,
+  fetchGitUsersListStart,
+  fetchGitUsersListSuccess,
+  fetchGitUsersListFailure,
   fetchPaginatedUsersList,
 };
