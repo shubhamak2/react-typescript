@@ -1,8 +1,9 @@
 import { all, call, put, select, takeLatest } from 'redux-saga/effects';
 
 import { ADD_MORE_USERS, USER_DETAILS } from '../actions/constants';
-import { fetchingUserDetails } from '../gitUserDetails';
+import { fetchingUserDetails, fetchingUserDetailsFailure } from '../gitUserDetails';
 import {
+  fetchGitUsersListFailure,
   fetchGitUsersListStart,
   fetchGitUsersListSuccess,
   fetchPaginatedUsersList,
@@ -59,6 +60,15 @@ function* gitUsersWorker(action: any): any {
     }
   } catch (err) {
     console.error(`Error occuring while calling an action ${action.type}`, err);
+    // Error while fetching the users list
+    if (action.type === fetchGitUsersListStart.type || action.type === ADD_MORE_USERS) {
+      yield put(fetchGitUsersListFailure());
+    }
+
+    // Error while fetching the user details i.e profile and history data
+    if (action.type === USER_DETAILS) {
+      yield put(fetchingUserDetailsFailure());
+    }
   }
 }
 

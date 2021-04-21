@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-// page number and limit
 
 interface State {
   isLoading: boolean;

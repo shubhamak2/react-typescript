@@ -5,9 +5,9 @@ import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import { GitUsersList } from './components/Home/gitUsersList';
+import MyErrorBoundary from './components/Layout/errorBoundary';
 import Header from './components/Layout/header';
 import { UserDetails } from './components/userDetails';
-import MyErrorBoundary from './components/Layout/errorBoundary';
 import store from './redux/store';
 
 const App = () => (

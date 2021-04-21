@@ -1,21 +1,22 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 // @ts-ignore
 import * as styles from '../../styles';
 import { StyleConstants } from '../styleConstants';
-import { Link } from 'react-router-dom';
 
 interface State {
   errorMessage: string;
 }
 
-class MyErrorBoundary extends React.Component<any, State>  {
-  state = {
-    errorMessage: ''
+class MyErrorBoundary extends React.Component<any, State> {
+  static getDerivedStateFromError(error: any) {
+    return { errorMessage: error.toString() };
   }
 
-  static getDerivedStateFromError(error: any) {
-    return {errorMessage: error.toString()}
-  }
+  state = {
+    errorMessage: '',
+  };
 
   render() {
     if (this.state.errorMessage) {
@@ -26,7 +27,7 @@ class MyErrorBoundary extends React.Component<any, State>  {
           </div>
           <div className={styles.returnHome}>
             <Link
-              to={`/`}
+              to={'/'}
               style={{
                 textDecoration: 'none',
                 color: StyleConstants.colors.linkButton,
@@ -36,9 +37,10 @@ class MyErrorBoundary extends React.Component<any, State>  {
             </Link>
           </div>
         </div>
-      )
+      );
     }
-    return this.props.children
+
+    return this.props.children;
   }
 }
 

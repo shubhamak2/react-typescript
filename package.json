@@ -4,7 +4,6 @@
   "license": "MIT",
   "scripts": {
     "start": "cross-env NODE_ENV=development parcel --port 3000 index.html",
-    "build": "cross-env NODE_ENV=production parcel build index.html",
     "lint": "npm run lint:scripts && npm run lint:declarations",
     "lint:scripts": "tslint './src/**/*.{ts,tsx}' --project tsconfig.json --fix --format stylish",
     "lint:declarations": "tslint --project tsconfig.json --format stylish --fix './typings/**/*'",

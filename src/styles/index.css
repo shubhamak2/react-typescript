@@ -40,6 +40,19 @@ body {
   font-size: 18px;
 }
 
+.historyUserName {
+  display: flex;
+  color: #262626;
+  font-size: 14px;
+}
+
+.repoName {
+  text-align: left;
+  display: block;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
 .teamData {
   margin-top: 6px;
 }
@@ -96,6 +109,12 @@ body {
   display: inline-block;
 }
 
+.userHistoryContainer {
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
 .logoText {
   font-size: 12px;
   color: #999999;
@@ -116,10 +135,18 @@ body {
 
 .profileGrid {
   background-color: rgba(255, 255, 255, 0.8);
-  padding: 20px;
   text-align: center;
-  width: 44%;
+  width: calc(100% / 2 - 40px);
   float: left;
+  margin: 0 10px;
+}
+
+.profileDataSection {
+  padding: 20px;
+}
+
+.profileHistorySection {
+  padding: 20px;
 }
 
 .backContainer {

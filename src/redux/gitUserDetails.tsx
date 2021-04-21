@@ -1,7 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit';
 // page number and limit
 
-const initialState = {
+interface State {
+  isLoading: boolean;
+  userDetails: any;
+  userHistory: any;
+  error: boolean;
+}
+
+const initialState: State = {
   isLoading: true,
   userDetails: [],
   userHistory: [],

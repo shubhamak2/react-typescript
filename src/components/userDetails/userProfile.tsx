@@ -28,7 +28,7 @@ export const UserProfile = ({ userImage, userName, id, repoCount }: UserProfile)
         </div>
       </div>
       <div className={styles.userListFooterContainer}>
-        <div style={{ marginTop: '12px' }}>
+        <div style={{ marginTop: '12px', padding: '0 20px' }}>
           <span className={styles.username}>
             Repositories
           </span>
