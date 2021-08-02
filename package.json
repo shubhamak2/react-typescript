@@ -7,7 +7,6 @@
     "lint": "npm run lint:scripts && npm run lint:declarations",
     "lint:scripts": "tslint './src/**/*.{ts,tsx}' --project tsconfig.json --fix --format stylish",
     "lint:declarations": "tslint --project tsconfig.json --format stylish --fix './typings/**/*'",
-    "prepush": "npm run lint && tsc --noEmit",
     "dependencies:update": "npx npm-check --update --save-exact",
     "tsc": "tsc"
   },
